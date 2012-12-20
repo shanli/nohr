@@ -1,0 +1,25 @@
+1.如何查看自动化测试结果：
+    /nohr/svn/branches/branche_a/sea-testResult.js
+    将读取/nohr/svn/branches/branche_a/nodejsTest/index.html
+    编辑sea-testResult.js修改ip及端口地址
+    执行node sea-testResult.js
+    在浏览器里面输入对应的ip及端口地址可以查看到测试结果
+
+2.查看/nohr/svn/branches/branche_a/nodejsTest/main.js
+    中qunit、code、tests登陆路径是否正确
+    如果没有问题执行node main.js >> index.html
+    会将测试结果输出到index.html中，记得每次执行这个命令时
+    先执行rm index.html
+
+3./nohr/svn/branches/branche_a/nodejsTest/src
+    为需测试的 调用PHP接口代码 及一些基本类库
+    参考mock.js
+
+4./nohr/svn/branches/branche_a/nodejsTest/tests
+    为测试用例代码
+    Qunit基本语法参见example.js
+    测试用例代码参见test.js
+
+参考资料：
+Qunit：http://qunitjs.com/
+NodeJs+Qunit：http://gaochongid.blog.51cto.com/968577/1028590

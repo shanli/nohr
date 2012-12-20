@@ -1,0 +1,18 @@
+var qs = require('querystring');
+
+exports.reg_1_in = {
+    host    : 'api-dev.soquweb.tk',
+    path    : '/index/login/register/?' + qs.stringify({
+        type: 1, username: 'gaochong', password: '...'
+    }),
+    headers : {
+        api_key : 1
+    }
+};
+
+// 该用户已经注册过
+exports.reg_1_out = {
+    success     : "0",
+    ErrorCode   : "-9",
+    Reason      : "用户被占用"
+};
