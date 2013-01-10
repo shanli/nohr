@@ -3,6 +3,8 @@ var express = require('express'),
 
 app.listen( 8000, '192.168.1.8' );
 
+
+
 /**
  * 显示首页
  * www.nohr.com
