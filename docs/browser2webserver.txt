@@ -1,0 +1,40 @@
+Web界面和后台交互接口
+===================
+
+HTTP方法说明
+===========
+1. GET：获取已有配置, 有返回值。READ
+2. POST：添加新条目（id域为无意义值NULL）。CREAT
+3. PUT：更新条目（id不为空）。UPDATE
+4. DELETE：删除记录（id不为空）
+
+
+DB参数配置
+=========
+Database: nohr
+Username: root
+Password: root
+
+
+// TODO
+********
+主页列表
+********
+URL: /
+Table: job, worker
+
+只查询相关字段，不需要全部
+
+GET返回结果
+{
+  'status': int //0表示成功,非0表示获取数据失败,message提示失败信息
+  'message': str  //失败信息, status为非0时，才有内容，否则为空
+  'data': [{
+      'jname': 'jname_str',
+      'ctime': 'ctime_str',
+      'number': n_int,
+      'workplace': 'wp_str'
+    }
+    , ....
+  ]
+}
